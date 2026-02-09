@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* .container h1 {
+  color: blue;
+} */
+
+#heading {
+  color: purple !important;
+}
+
+.heading {
+  color: green;
+}
+
+h1 {
+  color: red !important;
+}
+
+/* Specificity */
+/* 
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration
+1. Inline CSS (style attribute)
+2. ID #
+3. Class .
+4. Element
+*/
