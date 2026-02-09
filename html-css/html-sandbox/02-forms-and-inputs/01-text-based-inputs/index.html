@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,5 +7,42 @@
   </head>
   <body>
     <h1>HTML & CSS Sandbox - Text Inputs</h1>
+
+    <!-- <input> Element Types -->
+    <!-- 
+      text - Single-line text field
+      email - Sigle line email
+      password - Single line password with hidden characters
+      number - Single line numbers
+      textarea - Multi-text field
+      select - Dropdown list of options
+      date - Date picker
+      checkbox - Checkbox field with multiple options
+      radio - Radio boxes with single option
+      file - File upload field
+      submit - Submit button
+      range - Slider input to select from a range
+      color - Color picker
+     -->
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </div>
+      <br />
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+      <div>
+        <!-- <input type="submit" value="Submit" /> -->
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   </body>
 </html>
