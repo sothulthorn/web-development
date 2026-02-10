@@ -31,3 +31,13 @@
 - Padding - Space between content and border
 - Border - Separates the padding & margin
 - Margin - Space outside of border
+
+---
+
+**Typical Breakpoints**
+
+- **576px** - Smartphones
+- **768px** - Tablets
+- **992px** - Desktop
+- **1024px** - Landscape
+- **1200px** - Desktop/Widescreen
