@@ -22,3 +22,12 @@
 - `a:active`: Moment link is clicked
 - `a:focus`: Moment link receives focus
 - `a:visited`: Link user has visited
+
+---
+
+**Box Model**
+
+- Content - Text, images, etc
+- Padding - Space between content and border
+- Border - Separates the padding & margin
+- Margin - Space outside of border
