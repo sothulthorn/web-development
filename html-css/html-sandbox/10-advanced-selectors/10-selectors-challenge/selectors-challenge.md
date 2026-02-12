@@ -1,3 +1,8 @@
+# Selectors Challenge
+
+Now it's time to test your knowledge of selectors. We are going to use the project listings website that we created when we did the sticky navbar. I added a little bit to it including some unordered lists. The code is in the project files for this lesson, but here is the full HTML:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,19 +55,18 @@
           consequuntur sint blanditiis nobis vero explicabo distinctio ducimus
           doloremque voluptatem, possimus <a href="#">corporis</a> quis commodi
           repellat magnam fugiat cupiditate assumenda. Corrupti nulla quos,
-          dignissimos mollitia <a href="#">corporis</a> deleniti adipisci illo
-          aliquid nesciunt atque vel facilis?
+          dignissimos mollitia deleniti adipisci illo aliquid nesciunt atque vel
+          facilis?
         </p>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          minus nesciunt temporibus hic <a href="#">corporis</a> fugiat enim
-          ullam, sed minima tempore non, voluptas molestias culpa fugit autem
-          alias odio a! Maxime numquam amet doloribus voluptatum, provident
-          hello odio, rerum iste illo ipsa dolorem error dolor totam voluptas
-          omnis quis! Fugit labore cupiditate assumenda. Voluptates dolorem
-          <span>hello</span> dignissimos, id odit nobis provident omnis
-          <a href="#">corporis</a> deserunt eos ratione quidem, eaque magnam,
+          minus nesciunt temporibus hic fugiat enim ullam, sed minima tempore
+          non, voluptas molestias culpa fugit autem alias odio a! Maxime numquam
+          amet doloribus voluptatum, provident hello odio, rerum iste illo ipsa
+          dolorem error dolor totam voluptas omnis quis! Fugit labore cupiditate
+          assumenda. Voluptates dolorem <span>hello</span> dignissimos, id odit
+          nobis provident omnis deserunt eos ratione quidem, eaque magnam,
           quibusdam doloribus obcaecati rem dolor quis quaerat perferendis porro
           debitis dolore.
         </p>
@@ -164,3 +168,140 @@
     </main>
   </body>
 </html>
+```
+
+Here is the current CSS:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(45deg, #f00, #00f);
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 80px;
+}
+
+.header .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header .menu a {
+  color: #fff;
+}
+
+.header .menu a:hover {
+  color: #f00;
+}
+
+.section {
+  margin: 30px 0;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 45px;
+  background: linear-gradient(45deg, #f00, #00f);
+  color: #fff;
+}
+
+.section#home {
+  margin-bottom: 100px;
+}
+
+/* YOUR STYLES HERE */
+```
+
+This is not about making this project look good, it is just to test your knowledge of selectors. Here are the tasks:
+
+1. Make the background color for the first paragraph in all sections lightyellow
+2. Alternate background colors for all lis #eee and #ddd
+3. Make the background #f4f4f4 and the padding 20px for all sections that have an image
+4. Make the first paragraph after a ul #f4f4f4
+5. Make the color of any links that start with http:// or https:// red
+6. Make the first link in the first paragraph and the second paragraph of the second section bold
+
+<details>
+
+<summary>Solution</summary>
+
+```css
+/* 1. Make the background color for the first paragraph in all sections lightyellow */
+.section p:first-of-type {
+  background-color: lightyellow;
+}
+
+/* 2. Alternate background colors for all lis #eee and #ddd */
+.section li:nth-child(odd) {
+  background-color: #eee;
+}
+
+.section li:nth-child(even) {
+  background-color: #ddd;
+}
+
+/* 3. Make the background #f4f4f4 and the padding 20px for all sections that have an image */
+.section:has(img) {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* 4. Make the first paragraph after a ul #f4f4f4 */
+ul + p {
+  background-color: #f4f4f4;
+}
+
+/* 5. Make the color of any links that start with http:// or https:// red  */
+a[href^="http://"],
+a[href^="https://"]
+{
+  color: #f00;
+}
+
+/* 6. Make the first link in the first paragraph and the second paragraph of the second section bold */
+.section:nth-of-type(2) p:first-of-type a,
+.section:nth-of-type(2) p:nth-of-type(2) {
+  font-weight: bold;
+}
+```
+
+</details>
