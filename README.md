@@ -41,3 +41,73 @@
 - **992px** - Desktop
 - **1024px** - Landscape
 - **1200px** - Desktop/Widescreen
+
+### JavaScript
+
+**What is the Document Object Model?**
+
+- Programming interface for web/html elements
+- Structure that we can interact with via JavaScript
+- Includes tags, attributes, text nodes, etc
+- Representated as a tree structure
+
+**DOM Visualization**
+
+```bash
+flowchart TD
+  DOC[Document]
+  HTML[html]
+  HEAD[head]
+  BODY[body]
+
+  TITLE[title]
+  META[meta]
+  LINK[link]
+
+  HEADER[header]
+  MAIN[main]
+  FOOTER[footer]
+
+  H1[h1]
+  NAV[nav]
+  SECTION[section]
+  ARTICLE[article]
+  ASIDE[aside]
+
+  P[p]
+  DIV[div]
+  UL[ul]
+  LI1[li]
+  LI2[li]
+  A[a]
+  IMG[img]
+
+  DOC --> HTML
+  HTML --> HEAD
+  HTML --> BODY
+
+  HEAD --> META
+  HEAD --> LINK
+  HEAD --> TITLE
+
+  BODY --> HEADER
+  BODY --> MAIN
+  BODY --> FOOTER
+
+  HEADER --> H1
+  HEADER --> NAV
+
+  MAIN --> SECTION
+  MAIN --> ARTICLE
+  MAIN --> ASIDE
+
+  ARTICLE --> P
+  ARTICLE --> DIV
+
+  DIV --> UL
+  UL --> LI1
+  UL --> LI2
+  LI1 --> A
+  LI2 --> IMG
+
+```
