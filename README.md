@@ -13,8 +13,6 @@
 3. Class .
 4. Element
 
----
-
 **Styling Links**
 
 - `a:link`: Normal unvisited link
@@ -23,16 +21,12 @@
 - `a:focus`: Moment link receives focus
 - `a:visited`: Link user has visited
 
----
-
 **Box Model**
 
 - Content - Text, images, etc
 - Padding - Space between content and border
 - Border - Separates the padding & margin
 - Margin - Space outside of border
-
----
 
 **Typical Breakpoints**
 
@@ -41,6 +35,8 @@
 - **992px** - Desktop
 - **1024px** - Landscape
 - **1200px** - Desktop/Widescreen
+
+---
 
 ### JavaScript
 
@@ -51,63 +47,18 @@
 - Includes tags, attributes, text nodes, etc
 - Representated as a tree structure
 
-**DOM Visualization**
+**What Are Events?**
 
-```bash
-flowchart TD
-  DOC[Document]
-  HTML[html]
-  HEAD[head]
-  BODY[body]
+Actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
 
-  TITLE[title]
-  META[meta]
-  LINK[link]
+- Clicking on an element
+- Typing into a text field
+- Hovering over an element
+- Submitting a form
+- Closing a window
+- Dragging an element
+- Resizing an element
 
-  HEADER[header]
-  MAIN[main]
-  FOOTER[footer]
+**Event Bubbling**
 
-  H1[h1]
-  NAV[nav]
-  SECTION[section]
-  ARTICLE[article]
-  ASIDE[aside]
-
-  P[p]
-  DIV[div]
-  UL[ul]
-  LI1[li]
-  LI2[li]
-  A[a]
-  IMG[img]
-
-  DOC --> HTML
-  HTML --> HEAD
-  HTML --> BODY
-
-  HEAD --> META
-  HEAD --> LINK
-  HEAD --> TITLE
-
-  BODY --> HEADER
-  BODY --> MAIN
-  BODY --> FOOTER
-
-  HEADER --> H1
-  HEADER --> NAV
-
-  MAIN --> SECTION
-  MAIN --> ARTICLE
-  MAIN --> ASIDE
-
-  ARTICLE --> P
-  ARTICLE --> DIV
-
-  DIV --> UL
-  UL --> LI1
-  UL --> LI2
-  LI1 --> A
-  LI2 --> IMG
-
-```
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
